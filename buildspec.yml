@@ -9,7 +9,7 @@ env:
 phases:
   install:
     runtime-versions:
-      nodejs: 14  # Use the Node.js version you need
+      nodejs: 18  # Use the Node.js version you need
   pre_build:
     commands:
       - echo "Installing Node.js dependencies..."
