@@ -13,9 +13,9 @@ phases:
 
   pre_build:
     commands:
-      - echo "Fetching code from GitHub..."
-      - git clone https://github.com/Shashank2712/node-todo-cicd-aws-pipeline.git || true
-      - cd node-todo-cicd-aws-pipeline  # Navigate to your Node.js app directory
+      # - echo "Fetching code from GitHub..."
+      # - git clone https://github.com/Shashank2712/node-todo-cicd-aws-pipeline.git || true
+      # - cd node-todo-cicd-aws-pipeline  # Navigate to your Node.js app directory
       - echo "Installing Node.js dependencies..."
       - npm install  # Use yarn if you prefer
 
@@ -24,8 +24,8 @@ phases:
       - echo "Running tests..."  # You can replace this with actual test commands
       - echo "Building Docker image..."
       - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin "$DOCKER_REGISTRY_URL"
-      - docker build -t "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/your-node-app:latest" .
-      - docker push "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/your-node-app:latest"
+      - docker build -t "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/node-todo-cicd-aws-pipeline:latest" .
+      - docker push "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/node-todo-cicd-aws-pipeline:latest"
 
   post_build:
     commands:
