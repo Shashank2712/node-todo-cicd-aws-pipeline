@@ -14,8 +14,9 @@ phases:
   pre_build:
     commands:
       - echo "Fetching code from GitHub..."
-      - git clone https://github.com/your-username/your-node-app.git || true
-      - cd your-node-app  # Navigate to your Node.js app directory
+      - git clone https://github.com/Shashank2712/node-todo-cicd-aws-pipeline.git || true
+      - mkdir node-todo-cicd-aws-pipeline
+      - cd node-todo-cicd-aws-pipeline  # Navigate to your Node.js app directory
       - echo "Installing Node.js dependencies..."
       - npm install  # Use yarn if you prefer
 
